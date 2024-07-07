@@ -2,26 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-.leftAside {
-  @apply w-1/4 p-4;
-}
-
+/* Layout Principal */
 .mainContainer {
-  @apply flex;
+  @apply flex flex-col md:flex-row;
 }
 
+.leftAside {
+  @apply w-full md:w-1/4 p-4;
+}
+
+.rightAside {
+  @apply hidden xl:block lg:w-1/4 p-4; 
+}
+
+.mainContent {
+  @apply flex-1 p-4;
+}
+
+/* Aside */
 .aside {
   @apply flex flex-col;
 }
 
+/* Scroll */
+.conteinerAsideScroll {
+  @apply mt-5 w-full md:w-56 ml-0 md:ml-20  overflow-y-auto;
+}
+
 .conteinerScroll {
-  @apply flex flex-col pl-4 max-h-[42vh] max-w-[250px] overflow-y-auto mt-2;
+  @apply flex flex-col max-h-[42vh] w-full overflow-y-auto mt-2;
   scrollbar-width: thin;
-  scrollbar-color: #4A90E2 #f1f1f1;
+  scrollbar-color: #c0c0c0 #f1f1f1;
 }
 
 .conteinerScroll::-webkit-scrollbar {
-  width: 8px;
+  width: 8px; /* Adjust width of the scrollbar */
 }
 
 .conteinerScroll::-webkit-scrollbar-track {
@@ -29,13 +44,9 @@
 }
 
 .conteinerScroll::-webkit-scrollbar-thumb {
-  background-color: #4A90E2;
+  background-color: #c0c0c0;
   border-radius: 10px;
   border: 2px solid #f1f1f1;
-}
-
-.cardContainer {
-  @apply bg-white border border-gray-200 rounded-lg shadow-md p-4 w-60;
 }
 
 .cardHeader {
@@ -184,7 +195,7 @@
 }
 
 .txtItems {
-  @apply block pl-3 pt-4 pb-4 text-2xl font-bold mb-3 mt-3 mx-0 text-black;
+  @apply text-black block text-lg font-bold mx-0 my-4 p-4 text-center;
 }
 
 .listNavSecond {
@@ -209,7 +220,7 @@
 
 /* Social Media */
 .containerAsideSocialMedia {
-  @apply flex justify-start items-start gap-4 mt-4 ml-10 mb-4 w-56;
+  @apply flex justify-end items-end gap-4 mt-4 ml-10 mb-4 w-56;
 }
 
 .clink {
@@ -221,18 +232,12 @@
 }
 
 /* Scroll */
-
-.conteinerAsideScroll {
-  @apply mt-5 w-56 ml-20;
-}
-
 .conteinerScroll {
-  @apply flex flex-col pl-4 max-h-[42vh] max-w-[250px] overflow-y-auto mt-2;
+  @apply flex flex-col pl-4 max-h-[42vh] w-full overflow-y-auto mt-2;
   scrollbar-width: thin;
   scrollbar-color: #4A90E2 #f1f1f1;
 }
 
-/* Estilos para la barra de desplazamiento en navegadores basados en WebKit */
 .conteinerScroll::-webkit-scrollbar {
   width: 8px;
 }
@@ -248,7 +253,7 @@
 }
 
 .bar-element {
-  @apply w-full;
+  @apply w-auto;
 }
 
 .aElement {
@@ -262,7 +267,7 @@
 /* CardDevTo */
 
 .cardContainer {
-  @apply bg-white border border-gray-200 rounded-lg shadow-md p-4 w-60;
+  @apply bg-white border border-gray-200 rounded-lg shadow-md p-4 w-60 ml-20;
 }
 
 .cardHeader {
@@ -309,4 +314,100 @@
 
 .highlight {
   @apply text-gray-800 font-semibold;
+}
+
+
+/* Contenido centrado */
+.custom-margin-top {
+  margin-top: 5rem; /* Ajusta el valor según sea necesario */
+}
+
+.mainContainer {
+  @apply flex;
+}
+
+.leftAside {
+  @apply w-1/4 p-4;
+}
+
+.mainContent {
+  @apply flex-1 p-4;
+}
+
+.postCard {
+  @apply bg-white border border-gray-200 rounded-lg shadow-md p-4;
+}
+
+.postImage {
+  @apply w-full h-auto rounded-t-lg;
+}
+
+.postContent {
+  @apply p-4;
+}
+
+.postHeader {
+  @apply flex items-center mb-4;
+}
+
+.authorAvatar {
+  @apply w-10 h-10 rounded-full mr-4;
+}
+
+.authorName {
+  @apply text-gray-800 font-bold;
+}
+
+.postDate {
+  @apply text-gray-500 text-sm;
+}
+
+.postTitle {
+  @apply text-xl font-bold text-gray-900 mb-2;
+}
+
+.postTags {
+  @apply text-gray-600 mb-4;
+}
+
+.postFooter {
+  @apply flex justify-between items-center mt-4;
+}
+
+.postReactions, .postComments, .postReadTime {
+  @apply text-gray-600 text-sm;
+}
+
+/* Contenido Derecho */
+
+.rightAside {
+  @apply w-1/4 p-4;
+}
+
+.asideContent {
+  @apply space-y-6;
+}
+
+.section {
+  @apply bg-white border border-gray-200 rounded-lg shadow-md p-4;
+}
+
+.sectionTitle {
+  @apply text-lg font-bold text-gray-800;
+}
+
+.sectionSubtitle {
+  @apply text-gray-600 mb-4;
+}
+
+.sectionItem {
+  @apply mb-4;
+}
+
+.sectionLink {
+  @apply text-blue-600 font-semibold;
+}
+
+.comments {
+  @apply text-gray-500 text-sm;
 }

@@ -3,10 +3,6 @@ import React from 'react'
 const PopularTags = () => {
     return (
         <div className="conteinerAsideScroll">
-            <h3 className="txtItems">
-                Popular Tags
-            </h3>
-            <div className="conteinerScroll">
                 <div className="bar-element">
                     {[
                         'webdev', 'javascript', 'beginners', 'programming', 'tutorial', 'react',
@@ -17,9 +13,7 @@ const PopularTags = () => {
                         <a key={index} href="#" className="aElement">#{tag}</a>
                     ))}
                 </div>
-            </div>
         </div>
-
     )
 }
 
