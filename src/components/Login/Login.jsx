@@ -34,6 +34,7 @@ const Login = ({ setShowLoginForm }) => {
                 return;
             }
 
+            localStorage.setItem('token', result.data.token);
             toast.success('Login successful');
             router.push('/');
         } catch (error) {
