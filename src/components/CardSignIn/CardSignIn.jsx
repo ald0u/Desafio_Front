@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
 
 const CardSignIn = () => {
     return (
@@ -13,14 +14,18 @@ const CardSignIn = () => {
             </p>
             <div className="btnInside">
                 <div className="aInside">
-                    <a className="aCAccount" href="/CreateAccount" target="_blank">Create account</a><br />
+                    <Link href="/enter" legacyBehavior>
+                        <a className="aCAccount">Create account</a>
+                    </Link>
                 </div>
-                <div className="aInside">
-                    <a className="aLogIn" href="/LogIn" target="_blank">Log in</a>
+                <div className="aInside text-center mt-4">
+                    <Link href="/LogIn" legacyBehavior>
+                        <a className="aLogIn">Log in</a>
+                    </Link>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default CardSignIn;

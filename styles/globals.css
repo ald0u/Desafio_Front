@@ -8,7 +8,7 @@
 }
 
 .leftAside {
-  @apply w-full md:w-1/4 p-4;
+  @apply w-full md:w-1/4 p-4 flex justify-start items-start;
 }
 
 .rightAside {
@@ -324,10 +324,6 @@
 
 .mainContainer {
   @apply flex;
-}
-
-.leftAside {
-  @apply w-1/4 p-4;
 }
 
 .mainContent {

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import searchIcon from '../../images/logos_svg/search.svg';
+import Link from 'next/link';
 
 const Navbar = () => {
     return (
@@ -39,17 +40,19 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="logAccoNav">
-                        <a className="aLogIn" href="#">
-                            Log in
-                        </a>
-                        <a className="aCreaAco" href="#">
-                            Create account
-                        </a>
+                        <Link href="/enter" legacyBehavior>
+                            <a className="aLogIn">
+                                Log in
+                            </a>
+                        </Link>
+                        <Link href="/enter" legacyBehavior>
+                            <a className="aCreaAco">
+                                Create 
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </nav>
-
-
         </main>
     );
 };
