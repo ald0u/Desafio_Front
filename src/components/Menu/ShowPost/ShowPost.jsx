@@ -3,7 +3,7 @@ import React from 'react';
 
 const ShowPost = ({ post }) => {
     return (
-        <div className="postCard bg-white border border-gray-200 rounded-lg shadow-md p-4 mb-4">
+        <div key={post.id} className="postCard bg-white border border-gray-200 rounded-lg shadow-md p-4 mb-4">
             {post.image && (
                 <Image
                     src={post.image}

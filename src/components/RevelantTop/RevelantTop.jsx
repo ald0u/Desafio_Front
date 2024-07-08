@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import AddPost from '../AddPost/AddPost';
+import { useState } from 'react';
+import CreatePost from '../CreatePost/CreatePost';
 import ShowPost from '../Menu/ShowPost/ShowPost';
 
 const RevelantTop = () => {
@@ -65,7 +65,7 @@ const RevelantTop = () => {
             </div>
 
             {showAddPost && (
-                <AddPost 
+                <CreatePost 
                     newPost={newPost} 
                     handleInputChange={handleInputChange} 
                     handleAddPost={handleAddPost} 

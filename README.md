@@ -1,40 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Proyecto de Comunidad DEV
 
-## Getting Started
+Este proyecto es una aplicación web para una comunidad de desarrolladores similar a DEV.to, donde los usuarios pueden registrarse, iniciar sesión, y crear publicaciones.
 
-First, run the development server:
+## Instrucciones de instalación
+
+1. Clona este repositorio en tu máquina local:
+   ```bash
+   git clone https://github.com/tuusuario/nombre-del-repositorio.git
+2. Navega en el directorio:
+   cd nombre-del-repositorio
+3. Instala dependencias:
+   npm install
+
+Asegúrate de tener Node.js instalado en tu máquina.
+
+Ejecuta el servidor de desarrollo:
 
 ```bash
+Copiar código
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Abre tu navegador y navega a http://localhost:3000 para ver la aplicación en funcionamiento.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Herramientas implementadas
+Este proyecto está construido utilizando las siguientes herramientas y tecnologías:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+React: Biblioteca de JavaScript para construir interfaces de usuario.
+Next.js: Framework de React para aplicaciones web de servidor y cliente.
+Tailwind CSS: Framework de CSS utilitario para diseñar interfaces de usuario.
+react-hook-form: Librería para manejar formularios en React.
+sonner: Librería de notificaciones para React.

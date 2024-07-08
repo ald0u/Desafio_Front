@@ -47,6 +47,7 @@ const CreateAccountForm = () => {
                 return;
             }
 
+            localStorage.setItem('userId', result.data.user._id);
             setSuccess('User created successfully');
             router.push('/enter');
         } catch (error) {

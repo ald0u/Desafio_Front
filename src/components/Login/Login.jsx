@@ -16,32 +16,38 @@ const Login = ({ setShowLoginForm }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
-
+      
         try {
-            const res = await fetch('http://localhost:8080/auth/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password }),
-            });
-
-            const result = await res.json();
-
-            if (!res.ok) {
-                setError(result.error);
-                toast.error(result.error);
-                return;
-            }
-
-            localStorage.setItem('token', result.data.token);
-            toast.success('Login successful');
+          const res = await fetch('http://localhost:8080/auth/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+          });
+      
+          const result = await res.json();
+      
+          if (!res.ok) {
+            setError(result.error);
+            toast.error(result.error);
+            return;
+          }
+      
+          if (result.success) {
+            const { token, userId } = result.data;
+            localStorage.setItem('token', token);
+            toast.success('Account created successfully');
             router.push('/');
+          } else {
+            setError(result.error);
+            toast.error(result.error);
+          }
         } catch (error) {
-            setError('An error occurred while logging in');
-            toast.error('An error occurred while logging in');
+          setError('An error occurred while creating the account');
+          toast.error('An error occurred while creating the account');
         }
-    };
+      };
 
     return (
         <div className="relative">

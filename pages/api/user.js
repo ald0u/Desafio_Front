@@ -49,3 +49,26 @@ export async function CreateNewPost(userData) {
   console.log(data);
   return data
 }
+
+export async function getUserById() {
+  const token = localStorage.getItem('token');
+  const userId = localStorage.getItem('userId');
+
+  if (!token || !userId) {
+    throw new Error('No token or userId found');
+  }
+
+  const response = await fetch(`http://localhost:8080/users/${userId}`, {
+    method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${token}`
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch user');
+  }
+
+  return await response.json();
+}
+
